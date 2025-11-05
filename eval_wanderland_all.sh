@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT="/media/huge/Game/test" #/media/huge/Game/squashfs-root/wanderland_eval
+ROOT="/wanderland_eval" #/media/huge/Game/squashfs-root
 PY="/home/huge/anaconda3/envs/vggt/bin/python"
 EVAL_SCRIPT="/media/huge/Huge/lab/vggt/benchmark/reconstruction/eval_colmap_poses_safe.py"
 MATCH_MODE="exact"
