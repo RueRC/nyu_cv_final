@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT="/media/huge/Game/test" #/media/huge/Game/squashfs-root/wanderland_eval"
-LOGDIR="${ROOT}/_vggt_logs"
-PY="/home/huge/anaconda3/envs/vggt/bin/python"
-SCRIPT="/media/huge/Huge/lab/vggt/demo_colmap.py"
+ROOT="/wanderland_eval"
+LOGDIR="/scratch/rc5832/logs"
+PY="/ext3/miniconda3/envs/vggt/bin/python"
+SCRIPT="/scratch/rc5832/vggt/code/demo_colmap.py"
 
 ## --max_num_img
 ##MAX_NUM_IMG="${MAX_NUM_IMG:-}"
