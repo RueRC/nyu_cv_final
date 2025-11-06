@@ -5,6 +5,7 @@ ROOT="/wanderland_eval"
 LOGDIR="/scratch/rc5832/logs"
 PY="/ext3/miniconda3/envs/vggt/bin/python"
 SCRIPT="/scratch/rc5832/vggt/code/demo_colmap.py"
+OUTROOT="/scratch/rc5832/vggt_results"
 
 ## --max_num_img
 ##MAX_NUM_IMG="${MAX_NUM_IMG:-}"
@@ -15,26 +16,27 @@ export OMP_NUM_THREADS=${OMP_NUM_THREADS:-8}
 export MKL_NUM_THREADS=${MKL_NUM_THREADS:-8}
 export CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES:-0}
 
-mkdir -p "$LOGDIR"
+mkdir -p "$LOGDIR" "$OUTROOT"
 
 find "$ROOT" -type d -name images -print0 | while IFS= read -r -d '' imgdir; do
   scene_dir="$(dirname "$imgdir")"
-  out="/scratch/rc5832/vggt/sparse_vggt"
+  scene_name="$(basename "$scene_dir")"
+  out="${OUTROOT}/${scene_name}"
+  mkdir -p "$out"
 
   if [[ -s "${out}/images.bin" ]]; then
-    echo "[SKIP] $scene_dir (already has sparse_vggt)"
+    echo "[SKIP] $scene_dir (already has sparse_vggt at $out)"
     continue
   fi
 
   echo "[RUN ] $scene_dir"
   log="${LOGDIR}/$(echo "$scene_dir" | sed 's#/#_#g').log"
 
-  ARGS=( "--scene_dir=$scene_dir" )
+  ARGS=( "--scene_dir=$scene_dir" "--out_dir=$out" )
 #  if [[ -n "${MAX_NUM_IMG}" ]]; then
 #    ARGS+=( "--max_num_img=${MAX_NUM_IMG}" )
 #  fi
 
-  # log: failed.txt
   if "$PY" "$SCRIPT" "${ARGS[@]}" 2>&1 | tee "$log"; then
     echo "[DONE] $scene_dir"
   else
