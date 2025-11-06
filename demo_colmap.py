@@ -128,21 +128,21 @@ def demo_fn(args):
     # # ---- Uniform Down Sampling ----
     N = len(image_path_list)
 
-    if 100 <= N <= 1000: # TODO 500 <= N <= 1000
+    if 500 <= N <= 1000: # TODO 500 <= N <= 1000
         # Downsample by factor 2 → target ~ N/2 images
-        K = max(1, N // 20) # TODO 2
+        K = max(1, N // 2) # TODO 2
         sel_idx = np.linspace(0, N - 1, num=K, dtype=int).tolist()
         print(f"[Sampling Strategy] {N} images → downsample 1/2 → {K} images")
 
     elif 1001 <= N <= 1500:
         # Downsample by factor 3 → target ~ N/3 images
-        K = max(1, N // 30) # TODO 3
+        K = max(1, N // 3) # TODO 3
         sel_idx = np.linspace(0, N - 1, num=K, dtype=int).tolist()
         print(f"[Sampling Strategy] {N} images → downsample 1/3 → {K} images")
 
     elif N > 1500:
         # Recompute uniform interval to get **exactly 500 images**
-        K = 50 # TODO 500
+        K = 500 # TODO 500
         sel_idx = np.linspace(0, N - 1, num=K, dtype=int).tolist()
         print(f"[Sampling Strategy] {N} images → uniform sample to 500 images")
 
