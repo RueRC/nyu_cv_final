@@ -5,7 +5,7 @@ singularity exec \
   /scratch/work/public/singularity/cuda12.1.1-cudnn8.9.0-devel-ubuntu22.04.2.sif \
   /bin/bash
 
-# activate Singularity
+# run code
 cd /scratch/rc5832/vggt/code
 
 run-vggt.sbatch
