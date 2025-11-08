@@ -485,15 +485,9 @@ def main():
     parser.add_argument("--image_dir", type=str, required=True, help="Path to images folder")
     parser.add_argument("--config", type=str, default="./configs/base_config.yaml", help="Config yaml")
     parser.add_argument("--overwrite", action="store_true", help="Kept for CLI compatibility (ignored here)")
-    parser.add_argument('--exp_root', type=str, default='/media/huge/Game/test/exp',
+    parser.add_argument('--exp_root', type=str, default='/scratch/rc5832/vggt-long-results/exp',
                         help='Root directory to store exp outputs')
     args = parser.parse_args()
-
-    # # 固定输出根：/media/huge/Game/test/exp/<scene_name>
-    # EXP_ROOT = "/media/huge/Game/test/exp"
-    # scene_name = os.path.basename(os.path.dirname(args.image_dir.rstrip("/")))
-    # save_dir = os.path.join(EXP_ROOT, scene_name)
-    # os.makedirs(save_dir, exist_ok=True)
 
     exp_root = args.exp_root.rstrip("/")
     scene_name = os.path.basename(os.path.dirname(args.image_dir.rstrip("/")))
