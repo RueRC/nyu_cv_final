@@ -1,2 +1,8 @@
-# VGGT-Long
+singularity exec \
+  --overlay /scratch/rc5832/vggt/overlay-50G-10M.ext3 \
+  --overlay /vast/xl3136/DATA/wanderland_eval.sqf:ro \
+  /scratch/work/public/singularity/cuda12.1.1-cudnn8.9.0-devel-ubuntu22.04.2.sif \
+  /bin/bash
+
+sbatch run_vggt-long_plus_eval.sbatch
 
