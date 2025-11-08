@@ -491,6 +491,15 @@ def main():
     rte_t_m        = rte_trans_allpairs(pred_se3, gt_Ts)
     rte_t_deg, tdeg_arr = rte_trans_angle_allpairs(pred_se3, gt_Ts)
     rte_r_deg, rdeg_arr = rte_rot_allpairs(pred_se3, gt_Ts)
+
+    # ===== tem patch =====
+    if rdeg_arr.size != tdeg_arr.size:
+        n = min(rdeg_arr.size, tdeg_arr.size)
+        print(f"[warn] rdeg_arr={rdeg_arr.size}, tdeg_arr={tdeg_arr.size} -> clipping to {n}")
+        rdeg_arr = rdeg_arr[:n]
+        tdeg_arr = tdeg_arr[:n]
+    # ====================================
+    
     AUC30          = auc30(rdeg_arr, tdeg_arr, 30)
 
     # 完整度（建议用“公共张数/GT总数”，更符合覆盖率直觉）
