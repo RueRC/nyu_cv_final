@@ -5,22 +5,22 @@ set -euo pipefail
 # ========== USER CONFIG (EDIT) ========
 ########################################
 # Read-only source of scenes (each scene has a subfolder "images/")
-SCENE_ROOT="/media/huge/Game/test"
+SCENE_ROOT="/wanderland_eval"
 
 # Writable root for all final outputs (one folder per scene under here)
-OUTPUT_ROOT="/media/huge/Game/vggt-long-results"
+OUTPUT_ROOT="/scratch/rc5832/vggt-long-results"
 
 # Where your current vggt_long.py writes its stage-1 outputs (it may be hardcoded there)
 # We'll copy the two txt files from here into OUTPUT_ROOT/<scene>/exp/
-VGGT_EXP_ROOT="/media/huge/Game/vggt-long-results/exp"
+VGGT_EXP_ROOT="/scratch/rc5832/vggt-long-results/exp"
 
 # vggt_long config and Python
-CONFIG="./configs/base_config.yaml"
-PYTHON="/home/huge/anaconda3/envs/vggt-long/bin/python"
+CONFIG="/scratch/rc5832/vggt-long/code/configs/base_config.yaml"
+PYTHON="/ext3/miniconda3/envs/vggt-long/bin/python"
 
 # Exporter & evaluator scripts
-EXPORT_SCRIPT="./benchmark/export_to_colmap.py"
-EVAL_SCRIPT="./benchmark/eval_colmap_poses_safe.py"
+EXPORT_SCRIPT="/scratch/rc5832/vggt-long/code/benchmark/export_to_colmap.py"
+EVAL_SCRIPT="/scratch/rc5832/vggt-long/code/benchmark/eval_colmap_poses_safe.py"
 
 # GT sparse relative subdir (under the read-only scene folder)
 GT_SUBDIR="sparse/0"
@@ -35,7 +35,7 @@ MATCH="exact"
 OVERWRITE=0
 
 # ----------- Per-stage logs (fixed locations as requested) -----------
-LOG_ROOT="/media/huge/Game/vggt-long-results/_logs"
+LOG_ROOT="/scratch/rc5832/vggt-long-results/_logs"
 LOG_STAGE1="${LOG_ROOT}/stage1_vggt_long"
 LOG_STAGE2="${LOG_ROOT}/stage2_to_colmap"
 LOG_STAGE3="${LOG_ROOT}/stage3_eval"
