@@ -156,57 +156,57 @@ find "$SCENE_ROOT" -type d -name "images" -print0 | while IFS= read -r -d '' IMG
   fi
   echo
 
-#   ###################################
-#   # Stage 2: export to COLMAP into OUTPUT_ROOT/<scene>/<OUT_COLMAP_SUBDIR> (no /0)
-#   ###################################
-#   if [[ "$OVERWRITE" == "1" ]]; then
-#     rm -rf "$PRED_SPARSE"
-#   fi
-#   if [[ ! -f "$PRED_SPARSE/cameras.bin" ]] || [[ ! -f "$PRED_SPARSE/images.bin" ]]; then
-#     echo "[RUN 2/3] export_to_colmap.py  →  $PRED_SPARSE"
-#     mkdir -p "$PRED_SPARSE"
-#     { echo "[CMD] $PYTHON $EXPORT_SCRIPT --images \"$IMG_DIR\" --poses \"$DST_POSES_TXT\" --intr \"$DST_INTR_TXT\" --out \"$PRED_SPARSE\"";
-#       "$PYTHON" "$EXPORT_SCRIPT" \
-#         --images "$IMG_DIR" \
-#         --poses "$DST_POSES_TXT" \
-#         --intr  "$DST_INTR_TXT" \
-#         --out   "$PRED_SPARSE"; } \
-#         |& tee "$LOG2"
-#     # Normalize if exporter created a '0/' subdir
-#     normalize_colmap_layout "$PRED_SPARSE"
-#   else
-#     echo "[SKIP 2/3] COLMAP trio already present in $PRED_SPARSE"
-#   fi
-#   echo
+  ###################################
+  # Stage 2: export to COLMAP into OUTPUT_ROOT/<scene>/<OUT_COLMAP_SUBDIR> (no /0)
+  ###################################
+  if [[ "$OVERWRITE" == "1" ]]; then
+    rm -rf "$PRED_SPARSE"
+  fi
+  if [[ ! -f "$PRED_SPARSE/cameras.bin" ]] || [[ ! -f "$PRED_SPARSE/images.bin" ]]; then
+    echo "[RUN 2/3] export_to_colmap.py  →  $PRED_SPARSE"
+    mkdir -p "$PRED_SPARSE"
+    { echo "[CMD] $PYTHON $EXPORT_SCRIPT --images \"$IMG_DIR\" --poses \"$DST_POSES_TXT\" --intr \"$DST_INTR_TXT\" --out \"$PRED_SPARSE\"";
+      "$PYTHON" "$EXPORT_SCRIPT" \
+        --images "$IMG_DIR" \
+        --poses "$DST_POSES_TXT" \
+        --intr  "$DST_INTR_TXT" \
+        --out   "$PRED_SPARSE"; } \
+        |& tee "$LOG2"
+    # Normalize if exporter created a '0/' subdir
+    normalize_colmap_layout "$PRED_SPARSE"
+  else
+    echo "[SKIP 2/3] COLMAP trio already present in $PRED_SPARSE"
+  fi
+  echo
 
-#   ###################################
-#   # Stage 3: evaluate (read-only GT under SCENE_ROOT; write result into OUTPUT_ROOT/<scene>/)
-#   ###################################
-#   if [[ ! -d "$GT_DIR" ]]; then
-#     echo "[SKIP 3/3] GT dir not found: $GT_DIR"
-#     echo
-#     continue
-#   fi
-#   if [[ ! -f "$PRED_SPARSE/cameras.bin" ]]; then
-#     echo "[SKIP 3/3] Missing predicted cameras.bin: $PRED_SPARSE/cameras.bin"
-#     echo
-#     continue
-#   fi
+  ###################################
+  # Stage 3: evaluate (read-only GT under SCENE_ROOT; write result into OUTPUT_ROOT/<scene>/)
+  ###################################
+  if [[ ! -d "$GT_DIR" ]]; then
+    echo "[SKIP 3/3] GT dir not found: $GT_DIR"
+    echo
+    continue
+  fi
+  if [[ ! -f "$PRED_SPARSE/cameras.bin" ]]; then
+    echo "[SKIP 3/3] Missing predicted cameras.bin: $PRED_SPARSE/cameras.bin"
+    echo
+    continue
+  fi
 
-#   if [[ "$OVERWRITE" == "1" ]] || [[ ! -f "$EVAL_TXT" ]]; then
-#     echo "[RUN 3/3] eval_colmap_poses_safe.py  →  $EVAL_TXT"
-#     mkdir -p "$SCENE_OUT"
-#     { echo "[CMD] $PYTHON $EVAL_SCRIPT \"$PRED_SPARSE\" \"$GT_DIR\" --match \"$MATCH\" --output \"$EVAL_TXT\"";
-#       "$PYTHON" "$EVAL_SCRIPT" "$PRED_SPARSE" "$GT_DIR" --match "$MATCH" --output "$EVAL_TXT"; } \
-#         |& tee "$LOG3"
-#   else
-#     echo "[SKIP 3/3] Eval result already exists: $EVAL_TXT"
-#   fi
+  if [[ "$OVERWRITE" == "1" ]] || [[ ! -f "$EVAL_TXT" ]]; then
+    echo "[RUN 3/3] eval_colmap_poses_safe.py  →  $EVAL_TXT"
+    mkdir -p "$SCENE_OUT"
+    { echo "[CMD] $PYTHON $EVAL_SCRIPT \"$PRED_SPARSE\" \"$GT_DIR\" --match \"$MATCH\" --output \"$EVAL_TXT\"";
+      "$PYTHON" "$EVAL_SCRIPT" "$PRED_SPARSE" "$GT_DIR" --match "$MATCH" --output "$EVAL_TXT"; } \
+        |& tee "$LOG3"
+  else
+    echo "[SKIP 3/3] Eval result already exists: $EVAL_TXT"
+  fi
 
-#   echo
-#   echo "[DONE] $SCENE_NAME"
-#   echo "----------------------------------------"
-#   echo
-# done
+  echo
+  echo "[DONE] $SCENE_NAME"
+  echo "----------------------------------------"
+  echo
+done
 
 echo "============== All scenes processed. =============="
