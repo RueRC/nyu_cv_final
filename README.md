@@ -6,11 +6,18 @@ The project explores benchmarking and analysis of multiple state-of-the-art visu
 
 ## Demo GIFs
 
-### Demo 1: 
-(video1.gif)
+## Pedestrian Generation Demos
 
-### Demo 2: 
-(video2.gif)
+### Video 1: Trajectory and Behavior Control
+<p align="center">
+  <img src="video1.gif" width="700">
+</p>
+
+### Video 2: Additional Behavior Examples
+<p align="center">
+  <img src="video2.gif" width="700">
+</p>
+
 
 ---
 
