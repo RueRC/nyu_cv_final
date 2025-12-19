@@ -1,6 +1,6 @@
-# NYU Computer Vision – Final Project - Team Reconstructors
+# NYU Computer Vision – Final Project
 
-This repository contains the final project for the **NYU Computer Vision** course.
+Hi, we are **Team Reconstructors**. This repository contains the final project for the **NYU Computer Vision** course.
 
 The project explores benchmarking and analysis of multiple state-of-the-art visual geometry and reconstruction baselines, as well as a pedestrian behavior generation pipeline for simulation and data synthesis.
 
