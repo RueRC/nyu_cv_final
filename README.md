@@ -6,8 +6,8 @@ The project explores benchmarking and analysis of multiple state-of-the-art visu
 
 ## Demo Videos
 
-- [Video 1 – DEMO 1](main/video1.mp4)
-- [Video 2 – DEMO 2](main/video2.mp4)
+- [Video 1 – DEMO 1](video1.mp4)
+- [Video 2 – DEMO 2](video2.mp4)
 
 ---
 
