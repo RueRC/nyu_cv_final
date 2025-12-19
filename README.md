@@ -30,7 +30,7 @@ This repository is organized into the following branches, each corresponding to 
   Benchmarking results using the baseline **MUSt3R** model.
 
 - **`pedgen`**  
-  Monocular pedestrian behavior generation scripts for controlling pedestrian trajectories and behaviors in the **Unity Engine**, used for simulation and synthetic data generation.
+  MonocularBehavior scripts for controlling pedestrian trajectories and behaviors in the **Unity Engine**, used for simulation and synthetic data generation.
 
 
 ## Notes
