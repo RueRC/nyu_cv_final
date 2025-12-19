@@ -40,9 +40,5 @@ Each branch is self-contained and includes the code, configuration, and experime
 
 ---
 
-## Course Information
-
-**Course:** NYU Computer Vision  
-**Project Type:** Final Project
 
 
