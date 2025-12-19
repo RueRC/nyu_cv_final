@@ -32,13 +32,11 @@ This repository is organized into the following branches, each corresponding to 
 - **`pedgen`**  
   Monocular pedestrian behavior generation scripts for controlling pedestrian trajectories and behaviors in the **Unity Engine**, used for simulation and synthetic data generation.
 
----
 
 ## Notes
 
 Each branch is self-contained and includes the code, configuration, and experimental setups.
 
----
 
 
 
