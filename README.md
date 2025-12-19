@@ -4,18 +4,12 @@ Hi, we are **Team Reconstructors**. This repository contains the final project f
 
 The project explores benchmarking and analysis of multiple state-of-the-art visual geometry and reconstruction baselines, as well as a pedestrian behavior generation pipeline for simulation and data synthesis.
 
-## Demo GIFs
 
 ## Pedestrian Generation Demos
 
-### Video 1: Trajectory and Behavior Control
 <p align="center">
-  <img src="demo1.gif" width="700">
-</p>
-
-### Video 2: Additional Behavior Examples
-<p align="center">
-  <img src="demo2.gif" width="700">
+  <img src="demo1.gif" width="420">
+  <img src="demo2.gif" width="420">
 </p>
 
 
