@@ -13,8 +13,6 @@ The project explores benchmarking and analysis of multiple state-of-the-art visu
 </p>
 
 
----
-
 ## Repository Structure
 
 This repository is organized into the following branches, each corresponding to a specific component of the project:
