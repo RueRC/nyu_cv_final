@@ -10,12 +10,12 @@ The project explores benchmarking and analysis of multiple state-of-the-art visu
 
 ### Video 1: Trajectory and Behavior Control
 <p align="center">
-  <img src="video1.gif" width="700">
+  <img src="demo1.gif" width="700">
 </p>
 
 ### Video 2: Additional Behavior Examples
 <p align="center">
-  <img src="video2.gif" width="700">
+  <img src="demo2.gif" width="700">
 </p>
 
 
