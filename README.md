@@ -1,4 +1,4 @@
-# NYU Computer Vision – Final Project
+# NYU Computer Vision – Final Project - Team Reconstructors
 
 This repository contains the final project for the **NYU Computer Vision** course.
 
