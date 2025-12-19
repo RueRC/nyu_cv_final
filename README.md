@@ -29,7 +29,7 @@ This repository is organized into the following branches, each corresponding to 
 
 ## Notes
 
-Each branch is self-contained and includes the code, configuration, and experimental results relevant to its corresponding method or component.
+Each branch is self-contained and includes the code, configuration, and experimental setups.
 
 ---
 
