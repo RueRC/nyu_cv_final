@@ -63,7 +63,7 @@ def parse_args():
 
 
 def run_VGGT(model, images, dtype, resolution=518):
-    # images: [S, 3, H, W]  （注：下方会加 batch 维，保持你原版 aggregator 的期望形状）
+    # images: [S, 3, H, W] 
 
     assert len(images.shape) == 4
     assert images.shape[1] == 3
@@ -169,7 +169,7 @@ def demo_fn(args):
     # ---- Cameras only: run without depth ----
     extrinsic, intrinsic = run_VGGT(model, images, dtype, vggt_fixed_resolution)
 
-    # ---- Build empty-points reconstruction via your helper (cam_id 等交给封装) ----
+    # ---- Build empty-points reconstruction via your helper ----
     shared_camera = args.shared_camera
     camera_type = args.camera_type
     image_size = np.array([vggt_fixed_resolution, vggt_fixed_resolution], dtype=np.int32)
