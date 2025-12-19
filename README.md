@@ -4,10 +4,13 @@ Hi, we are **Team Reconstructors**. This repository contains the final project f
 
 The project explores benchmarking and analysis of multiple state-of-the-art visual geometry and reconstruction baselines, as well as a pedestrian behavior generation pipeline for simulation and data synthesis.
 
-## Demo Videos
+## Demo GIFs
 
-- [Video 1 – DEMO 1](video1.mp4)
-- [Video 2 – DEMO 2](video2.mp4)
+### Demo 1: 
+(video1.gif)
+
+### Demo 2: 
+(video2.gif)
 
 ---
 
