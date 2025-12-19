@@ -23,10 +23,10 @@ This repository is organized into the following branches, each corresponding to 
 - **`vggt-long`**  
   Benchmarking results using the baseline **VGGT-Long** model.
 
-- **`DUSt3R`**  
+- **`dust3r`**  
   Benchmarking results using the baseline **DUSt3R** model.
 
-- **`MUSt3R`**  
+- **`must3r`**  
   Benchmarking results using the baseline **MUSt3R** model.
 
 - **`pedgen`**  
