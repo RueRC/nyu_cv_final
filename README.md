@@ -18,16 +18,16 @@ The project explores benchmarking and analysis of multiple state-of-the-art visu
 This repository is organized into the following branches, each corresponding to a specific component of the project:
 
 - **`vggt`**  
-  Benchmarking results using the baseline **VGGT** model.
+  Benchmarking code using the baseline **VGGT** model.
 
 - **`vggt-long`**  
-  Benchmarking results using the baseline **VGGT-Long** model.
+  Benchmarking code using the baseline **VGGT-Long** model.
 
 - **`dust3r`**  
-  Benchmarking results using the baseline **DUSt3R** model.
+  Benchmarking code using the baseline **DUSt3R** model.
 
 - **`must3r`**  
-  Benchmarking results using the baseline **MUSt3R** model.
+  Benchmarking code using the baseline **MUSt3R** model.
 
 - **`pedgen`**  
   MonocularBehavior scripts for controlling pedestrian trajectories and behaviors in the **Unity Engine**, used for simulation and synthetic data generation.
