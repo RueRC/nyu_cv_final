@@ -1,11 +1,5 @@
 ![logo](assets/must3r.jpg)
 
-Official implementation of `MUSt3R: Multi-view Network for Stereo 3D Reconstruction`  
-[[Project page](https://europe.naverlabs.com/research/publications/must3r-multi-view-network-for-stereo-3d-reconstruction/)], [[MUSt3R arxiv](https://arxiv.org/abs/2503.01661)]  
-
-![examples](assets/examples.jpg)
-![overview](assets/overview.jpg)
-
 ```bibtex
 @inproceedings{must3r_cvpr25,
       title={MUSt3R: Multi-view Network for Stereo 3D Reconstruction}, 
@@ -23,25 +17,6 @@ Official implementation of `MUSt3R: Multi-view Network for Stereo 3D Reconstruct
       primaryClass={cs.CV}
 }
 ```
-
-
-## Table of Contents
-
-- [Table of Contents](#table-of-contents)
-- [License](#license)
-- [Get Started](#get-started)
-  - [Installation](#installation)
-  - [Checkpoints](#checkpoints)
-- [Demo](#demo)
-  - [Offline Gradio (+viser) Demo](#offline-gradio-viser-demo)
-  - [Online Visual Odometry Demo (open3d)](#online-visual-odometry-demo-open3d)
-- [Training](#training)
-  - [Notes](#notes)
-  - [Hyperparameters](#hyperparameters)
-
-## License
-MUSt3R is released under the MUSt3R Non-Commercial License. See [LICENSE](LICENSE) and [NOTICE](NOTICE) for more information.  
-[NOTICE](NOTICE) also contains information about the datasets used to train the checkpoints. The mapfree dataset in particular, which was used to train all models, has a very restrictive license.
 
 ## Get Started
 
@@ -103,6 +78,7 @@ cd ../../../../
 We provide several pre-trained models. For these checkpoints, make sure to agree to the license of all the training datasets we used, in addition to [MUSt3R License](LICENSE). For more information, check [NOTICE](NOTICE).
 
 | Modelname   | Training resolutions | Head | Encoder | Decoder |
+------------------------------------------------------------------
 | [`MUSt3R_512.pth`](https://download.europe.naverlabs.com/ComputerVision/MUSt3R/MUSt3R_512.pth) | 512x384, 512x336, 512x288, 512x256, 512x160 | Linear | ViT-L | ViT-B |
 
 ### Evaluation
