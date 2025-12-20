@@ -18,11 +18,7 @@
 }
 ```
 
-## Get Started
-
-MUSt3R extends the DUSt3R architecture through several modifications: making it symmetric and enabling online predictions of the camera pose and 3D structure of a collection of images by using a multi-layer memory mechanism.
-
-### Installation
+### Environment Setup
 
 #### using setup.py
 ```bash
@@ -77,8 +73,6 @@ cd ../../../../
 ### Checkpoints
 We provide several pre-trained models. For these checkpoints, make sure to agree to the license of all the training datasets we used, in addition to [MUSt3R License](LICENSE). For more information, check [NOTICE](NOTICE).
 
-| Modelname   | Training resolutions | Head | Encoder | Decoder |
-------------------------------------------------------------------
 | [`MUSt3R_512.pth`](https://download.europe.naverlabs.com/ComputerVision/MUSt3R/MUSt3R_512.pth) | 512x384, 512x336, 512x288, 512x256, 512x160 | Linear | ViT-L | ViT-B |
 
 ### Evaluation
