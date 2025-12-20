@@ -1,23 +1,3 @@
-![logo](assets/must3r.jpg)
-
-```bibtex
-@inproceedings{must3r_cvpr25,
-      title={MUSt3R: Multi-view Network for Stereo 3D Reconstruction}, 
-      author={Yohann Cabon and Lucas Stoffl and Leonid Antsfeld and Gabriela Csurka and Boris Chidlovskii and Jerome Revaud and Vincent Leroy},
-      booktitle = {CVPR},
-      year = {2025}
-}
-
-@misc{must3r_arxiv25,
-      title={MUSt3R: Multi-view Network for Stereo 3D Reconstruction}, 
-      author={Yohann Cabon and Lucas Stoffl and Leonid Antsfeld and Gabriela Csurka and Boris Chidlovskii and Jerome Revaud and Vincent Leroy},
-      year={2025},
-      eprint={2503.01661},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
-}
-```
-
 ### Environment Setup
 
 #### using setup.py
@@ -101,3 +81,21 @@ python slam.py --chkpt /path/to/MUSt3R_512.pth --res 512 --subsamp 4 --input /pa
 ```
 
 Hit the start toggle on the top right
+
+```bibtex
+@inproceedings{must3r_cvpr25,
+      title={MUSt3R: Multi-view Network for Stereo 3D Reconstruction}, 
+      author={Yohann Cabon and Lucas Stoffl and Leonid Antsfeld and Gabriela Csurka and Boris Chidlovskii and Jerome Revaud and Vincent Leroy},
+      booktitle = {CVPR},
+      year = {2025}
+}
+
+@misc{must3r_arxiv25,
+      title={MUSt3R: Multi-view Network for Stereo 3D Reconstruction}, 
+      author={Yohann Cabon and Lucas Stoffl and Leonid Antsfeld and Gabriela Csurka and Boris Chidlovskii and Jerome Revaud and Vincent Leroy},
+      year={2025},
+      eprint={2503.01661},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
