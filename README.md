@@ -35,29 +35,6 @@ cd ../../../
 
 You can check the hyperparameters we used to train these models in the [section: Our Hyperparameters](#our-hyperparameters)
 
-### Interactive demo
-
-In this demo, you should be able run DUSt3R on your machine to reconstruct a scene.
-First select images that depicts the same scene.
-
-You can adjust the global alignment schedule and its number of iterations.
-
-> [!NOTE]
-> If you selected one or two images, the global alignment procedure will be skipped (mode=GlobalAlignerMode.PairViewer)
-
-Hit "Run" and wait.
-When the global alignment ends, the reconstruction appears.
-Use the slider "min_conf_thr" to show or remove low confidence areas.
-
-```bash
-python3 demo.py --model_name DUSt3R_ViTLarge_BaseDecoder_512_dpt
-
-# Use --weights to load a checkpoint from a local file, eg --weights checkpoints/DUSt3R_ViTLarge_BaseDecoder_512_dpt.pth
-# Use --image_size to select the correct resolution for the selected checkpoint. 512 (default) or 224
-# Use --local_network to make it accessible on the local network, or --server_name to specify the url manually
-# Use --server_port to change the port, by default it will search for an available port starting at 7860
-# Use --device to use a different device, by default it's "cuda"
-```
 
 ## Evaluation
 
